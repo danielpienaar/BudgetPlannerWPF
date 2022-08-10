@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="ExpensePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="IncomePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LoanPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RentPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ReportPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="VehiclePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="ExpensePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="IncomePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LoanPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RentPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReportPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="VehiclePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

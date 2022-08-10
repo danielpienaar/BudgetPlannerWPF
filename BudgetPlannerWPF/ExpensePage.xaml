@@ -1,0 +1,46 @@
+﻿<Page x:Class="BudgetPlannerWPF.ExpensePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BudgetPlannerWPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="434.04" d:DesignWidth="533.333333333333"
+      Title="ExpensePage">
+
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">Groceries:</Label>
+        <TextBox x:Name="txbGroceries" Grid.Row="0" Grid.Column="1" Height="24" Width="auto" TextWrapping="Wrap" BorderBrush="Black" FontSize="16" Margin="0,0,50,0"/>
+        <Label x:Name="lblGroceriesError" Grid.Row="0" Grid.Column="1" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Red" Width="auto" Height="26"></Label>
+        
+        <Label Grid.Row="1" Grid.Column="0" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">Water and Lights:</Label>
+        <TextBox x:Name="txbWaterLights" Grid.Row="1" Grid.Column="1" Height="24" Width="auto" TextWrapping="Wrap" BorderBrush="Black" FontSize="16" Margin="0,0,50,0"/>
+        <Label x:Name="lblWaterLightsError" Grid.Row="1" Grid.Column="1" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Red" Width="auto" Height="26"></Label>
+        
+        <Label Grid.Row="2" Grid.Column="0" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">Travel:</Label>
+        <TextBox x:Name="txbTravel" Grid.Row="2" Grid.Column="1" Height="24" Width="auto" TextWrapping="Wrap" BorderBrush="Black" FontSize="16" Margin="0,0,50,0"/>
+        <Label x:Name="lblTravelError" Grid.Row="2" Grid.Column="1" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Red" Width="auto" Height="26"></Label>
+        
+        <Label Grid.Row="3" Grid.Column="0" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">Phone:</Label>
+        <TextBox x:Name="txbPhone" Grid.Row="3" Grid.Column="1" Height="24" Width="auto" TextWrapping="Wrap" BorderBrush="Black" FontSize="16" Margin="0,0,50,0"/>
+        <Label x:Name="lblPhoneError" Grid.Row="3" Grid.Column="1" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Red" Width="auto" Height="26"></Label>
+        
+        <Label Grid.Row="4" Grid.Column="0" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">Other:</Label>
+        <TextBox x:Name="txbOther" Grid.Row="4" Grid.Column="1" Height="24" Width="auto" TextWrapping="Wrap" BorderBrush="Black" FontSize="16" Margin="0,0,50,0"/>
+        <Label x:Name="lblOtherError" Grid.Row="4" Grid.Column="1" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Red" Width="auto" Height="26"></Label>
+        
+        <Button x:Name="btnExpenseSubmit" Grid.Column="1" Grid.Row="5" Width="100" Height="38" HorizontalAlignment="Left" Content="Submit" Background="White" Click="btnExpenseSubmit_Click"/>
+    </Grid>
+</Page>

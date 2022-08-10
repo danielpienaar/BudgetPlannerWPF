@@ -1,0 +1,54 @@
+﻿<Page x:Class="BudgetPlannerWPF.VehiclePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BudgetPlannerWPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="434.04" d:DesignWidth="533.333333333333"
+      Title="VehiclePage">
+
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">Make and Model:</Label>
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="txbMake" Grid.Row="0" Grid.Column="0" Height="24" TextWrapping="Wrap" BorderBrush="Black" FontSize="16" Margin="0,0,50,0"/>
+            <TextBox x:Name="txbModel" Grid.Row="0" Grid.Column="1" Height="24" TextWrapping="Wrap" BorderBrush="Black" FontSize="16" Margin="0,0,50,0"/>
+        </Grid>
+        
+        <Label x:Name="lblMakeModelError" Grid.Row="0" Grid.Column="1" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Red" Width="auto" Height="26"></Label>
+
+        <Label Grid.Row="1" Grid.Column="0" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">Price:</Label>
+        <TextBox x:Name="txbVehiclePrice" Grid.Row="1" Grid.Column="1" Height="24" Width="auto" TextWrapping="Wrap" BorderBrush="Black" FontSize="16" Margin="0,0,50,0"/>
+        <Label x:Name="lblVehiclePriceError" Grid.Row="1" Grid.Column="1" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Red" Width="auto" Height="26"></Label>
+
+        <Label Grid.Row="2" Grid.Column="0" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">Deposit:</Label>
+        <TextBox x:Name="txbVehicleDeposit" Grid.Row="2" Grid.Column="1" Height="24" Width="auto" TextWrapping="Wrap" BorderBrush="Black" FontSize="16" Margin="0,0,50,0"/>
+        <Label x:Name="lblVehicleDepositError" Grid.Row="2" Grid.Column="1" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Red" Width="auto" Height="26"></Label>
+
+        <Label Grid.Row="3" Grid.Column="0" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">Interest Rate (%):</Label>
+        <TextBox x:Name="txbVehicleInterest" Grid.Row="3" Grid.Column="1" Height="24" Width="auto" TextWrapping="Wrap" BorderBrush="Black" FontSize="16" Margin="0,0,50,0"/>
+        <Label x:Name="lblVehicleInterestError" Grid.Row="3" Grid.Column="1" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Red" Width="auto" Height="26"></Label>
+
+        <Label Grid.Row="4" Grid.Column="0" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">Insurance Premium:</Label>
+        <TextBox x:Name="txbVehicleInsurance" Grid.Row="4" Grid.Column="1" Height="24" Width="auto" TextWrapping="Wrap" BorderBrush="Black" FontSize="16" Margin="0,0,50,0"/>
+        <Label x:Name="lblVehicleInsuranceError" Grid.Row="4" Grid.Column="1" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Red" Width="auto" Height="26"></Label>
+
+        <Button x:Name="btnVehicleSubmit" Grid.Column="1" Grid.Row="5" Width="100" Height="38" HorizontalAlignment="Left" Content="Submit" Background="White" Click="btnVehicleSubmit_Click"/>
+    </Grid>
+</Page>

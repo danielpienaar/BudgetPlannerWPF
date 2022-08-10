@@ -1,0 +1,42 @@
+﻿<Window x:Name="BudgetWindow" x:Class="BudgetPlannerWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BudgetPlannerWPF"
+        mc:Ignorable="d"
+        Title="Budget Planner" Height="450" Width="800" MinHeight="450" MinWidth="800" WindowStartupLocation="CenterScreen" Icon="/icon.png">
+    <Grid Background="AliceBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!-- First Column (Data selection) -->
+        <StackPanel Grid.Column="0" Margin="30,20,30,20" VerticalAlignment="Center">
+            <Button x:Name="btnIncome" Padding="10" Content="Income" Background="White" IsEnabled="True" Click="btnIncome_Click"/>
+            <Label Margin="10" HorizontalContentAlignment="Center">
+                <Path Stroke="#FF84A8FF" Fill="#FFF1F1F1" StrokeThickness="2" Data="M 0, 0 l 15, 10 l 15, -10"/>
+            </Label>
+            <Button x:Name="btnExpenses" Padding="10" Content="Expenses" Background="White" IsEnabled="False" Click="btnExpenses_Click"/>
+            <!--
+            Path Markup Syntax from:
+            https://docs.microsoft.com/en-us/dotnet/desktop/wpf/graphics-multimedia/path-markup-syntax?view=netframeworkdesktop-4.8
+            Accessed 30 June 2022
+            -->
+            <Label Margin="10" HorizontalContentAlignment="Center">
+                <Path Stroke="#FF84A8FF" Fill="#FFF1F1F1" StrokeThickness="2" Data="M 0, 0 l 15, 10 l 15, -10"/>
+            </Label>
+            <Button x:Name="btnHome" Padding="10" Content="Home Details" Background="White" IsEnabled="False" Click="btnHome_Click"/>
+            <Label Margin="10" HorizontalContentAlignment="Center">
+                <Path Stroke="#FF84A8FF" Fill="#FFF1F1F1" StrokeThickness="2" Data="M 0, 0 l 15, 10 l 15, -10"/>
+            </Label>
+            <Button x:Name="btnVehicle" Padding="10" Content="Vehicle Details" Background="White" IsEnabled="False" Click="btnVehicle_Click"/>
+            <Label Margin="10" HorizontalContentAlignment="Center">
+                <Path Stroke="#FF84A8FF" Fill="#FFF1F1F1" StrokeThickness="2" Data="M 0, 0 l 15, 10 l 15, -10"/>
+            </Label>
+            <Button x:Name="btnReport" Padding="10" Content="Display Report" Background="White" IsEnabled="False" Click="btnReport_Click"/>
+        </StackPanel>
+        <!-- Second Column (Data input, display) -->
+        <Frame x:Name="DataFrame" Grid.Column="1" Background="LightGray" NavigationUIVisibility="Hidden"></Frame>
+    </Grid>
+</Window>
